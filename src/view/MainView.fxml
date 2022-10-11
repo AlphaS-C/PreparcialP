@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+
+
+<AnchorPane xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/17" fx:controller="controller.MainController">
+   <children>
+      <Pane prefHeight="258.0" prefWidth="424.0">
+         <children>
+            <TextField fx:id="codigo" layoutX="23.0" layoutY="34.0" promptText="Codigo del estudiante" />
+            <TextField fx:id="nombre" layoutX="23.0" layoutY="78.0" promptText="Nombre del estudiante" />
+            <TextField fx:id="nota1" layoutX="14.0" layoutY="125.0" prefHeight="22.0" prefWidth="56.0" promptText="Nota 1" />
+            <TextField fx:id="nota2" layoutX="75.0" layoutY="125.0" prefHeight="22.0" prefWidth="56.0" promptText="Nota 2" />
+            <TextField fx:id="nota3" layoutX="137.0" layoutY="125.0" prefHeight="22.0" prefWidth="56.0" promptText="Nota 3" />
+            <Button fx:id="agregar" layoutX="26.0" layoutY="175.0" mnemonicParsing="false" prefHeight="22.0" prefWidth="154.0" text="Agregar" onAction="#agregarEstudiante" />
+            <Button fx:id="cargar" layoutX="241.0" layoutY="223.0" mnemonicParsing="false" text="Cargar Archivo txt" />
+            <ListView fx:id="list" layoutX="202.0" layoutY="12.0" prefHeight="200.0" prefWidth="200.0" />
+            <Button fx:id="guardar" layoutX="24.0" layoutY="212.0" mnemonicParsing="false" prefHeight="22.0" prefWidth="154.0" text="Guardar en .txt" />
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>
