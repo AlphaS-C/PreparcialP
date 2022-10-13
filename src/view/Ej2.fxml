@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.Ej2Controller">
+   <children>
+      <Pane prefHeight="286.0" prefWidth="425.0">
+         <children>
+            <TextField fx:id="codigo" alignment="CENTER" layoutX="23.0" layoutY="34.0" promptText="Codigo del programa" />
+            <TextField fx:id="nombre" alignment="CENTER" layoutX="23.0" layoutY="78.0" promptText="Nombre del programa" />
+            <Button fx:id="agregar" layoutX="27.0" layoutY="162.0" mnemonicParsing="false" onAction="#agregarPrograma" prefHeight="22.0" prefWidth="154.0" text="Agregar" />
+            <Button fx:id="cargar" layoutX="26.0" layoutY="240.0" mnemonicParsing="false" onAction="#cargar" prefHeight="22.0" prefWidth="154.0" text="Cargar Archivo XML" />
+            <ListView fx:id="list" layoutX="202.0" layoutY="12.0" prefHeight="200.0" prefWidth="200.0" />
+            <Button fx:id="guardar" layoutX="27.0" layoutY="201.0" mnemonicParsing="false" onAction="#guardar" prefHeight="22.0" prefWidth="154.0" text="Guardar en XML" />
+            <TextField fx:id="busqueda" alignment="CENTER" layoutX="213.0" layoutY="223.0" onAction="#buscar" prefHeight="22.0" prefWidth="179.0" promptText="Buscar por código" />
+            <Text fx:id="feedback" layoutX="194.0" layoutY="267.0" strokeType="OUTSIDE" strokeWidth="0.0" text=" " wrappingWidth="216.145263671875" />
+            <ComboBox fx:id="combo" layoutX="25.0" layoutY="121.0" prefHeight="22.0" prefWidth="154.0" promptText="Modalidad" />
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

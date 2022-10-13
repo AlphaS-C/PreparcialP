@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<java version="17.0.3" class="java.beans.XMLDecoder">
+ <object class="java.util.ArrayList">
+  <void method="add">
+   <object class="model.Programa">
+    <void property="codigo">
+     <string>ijwefije</string>
+    </void>
+    <void property="modalidad">
+     <string>Presencial</string>
+    </void>
+    <void property="nombre">
+     <string>fiej</string>
+    </void>
+   </object>
+  </void>
+  <void method="add">
+   <object class="model.Programa">
+    <void property="codigo">
+     <string>ijwefije</string>
+    </void>
+    <void property="modalidad">
+     <string>Presencial</string>
+    </void>
+    <void property="nombre">
+     <string>fiej</string>
+    </void>
+   </object>
+  </void>
+  <void method="add">
+   <object class="model.Programa">
+    <void property="codigo">
+     <string>ijwefije</string>
+    </void>
+    <void property="modalidad">
+     <string>Presencial</string>
+    </void>
+    <void property="nombre">
+     <string>fiej</string>
+    </void>
+   </object>
+  </void>
+  <void method="add">
+   <object class="model.Programa">
+    <void property="codigo">
+     <string>334</string>
+    </void>
+    <void property="modalidad">
+     <string>Presencial</string>
+    </void>
+    <void property="nombre">
+     <string>widjw</string>
+    </void>
+   </object>
+  </void>
+ </object>
+</java>

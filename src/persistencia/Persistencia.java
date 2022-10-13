@@ -8,21 +8,31 @@ import java.io.IOException;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 import java.util.ArrayList;
+import java.util.List;
 import java.util.logging.FileHandler;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import java.util.logging.SimpleFormatter;
+import java.util.stream.Collectors;
+
+import controller.Ej2Controller;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
+import javafx.scene.control.ListView;
+import model.Estudiante;
+import model.Programa;
 
 
 public class Persistencia {
 
-	public static final String RUTA_ARCHIVO_CLIENTES = "src/resources/archivoClientes.txt";
-	public static final String RUTA_ARCHIVO_EMPLEADOS = "src/resources/archivoEmpleados.txt";
-	public static final String RUTA_ARCHIVO_USUARIOS = "src/resources/archivoUsuarios.txt";
-	public static final String RUTA_ARCHIVO_LOG = "src/resources/BancoLog.txt";
-	public static final String RUTA_ARCHIVO_OBJETOS = "src/resources/archivoObjetos.txt";
-	public static final String RUTA_ARCHIVO_MODELO_BANCO_BINARIO = "src/resources/model.dat";
-	public static final String RUTA_ARCHIVO_MODELO_BANCO_XML = "src/resources/model.xml";
+	public static final String RUTA_ARCHIVO_ESTUDIANTES = "src/persistencia/estudiantes.txt";
+	public static final String RUTA_ARCHIVO_PROGRAMAS = "src/persistencia/programas.txt";
+//	public static final String RUTA_ARCHIVO_EMPLEADOS = "src/resources/archivoEmpleados.txt";
+//	public static final String RUTA_ARCHIVO_USUARIOS = "src/resources/archivoUsuarios.txt";
+	public static final String RUTA_ARCHIVO_LOG = "src/persistencia/log.txt";
+//	public static final String RUTA_ARCHIVO_OBJETOS = "src/resources/archivoObjetos.txt";
+//	public static final String RUTA_ARCHIVO_MODELO_BANCO_BINARIO = "src/resources/model.dat";
+//	public static final String RUTA_ARCHIVO_MODELO_BANCO_XML = "src/resources/model.xml";
 
 
 	
@@ -62,18 +72,19 @@ public class Persistencia {
 	 * @throws IOException
 	 */
 	
-//	public static void guardarClientes(ArrayList<Cliente> listaClientes) throws IOException {
+	public static void guardarEstudiantes(List<Estudiante> listaEstudiantes) throws IOException {
 //		// TODO Auto-generated method stub
-//		String contenido = "";
+		String contenido = "";
 //		
-//		for(Cliente cliente:listaClientes) 
-//		{
+	for(Estudiante est:listaEstudiantes) 
+		{
+		contenido += est.toString() + "\n";
 //			contenido+= cliente.getNombre()+","+cliente.getApellido()+","+cliente.getCedula()+","+cliente.getDireccion()
 //		     +","+cliente.getCorreo()+","+cliente.getFechaNacimiento()+","+cliente.getTelefono()+"\n";
-//		}
-//		ArchivoUtil.guardarArchivo(RUTA_ARCHIVO_CLIENTES, contenido, false);
+		}
+		ArchivoUtil.guardarArchivo(RUTA_ARCHIVO_ESTUDIANTES, contenido, false);
 //		
-//	}
+	}
 	
 	
 //	public static void guardarEmpleados(ArrayList<Empleado> listaEmpleados) throws IOException {
@@ -125,34 +136,52 @@ public class Persistencia {
 	
 	
 	
-//	private static ArrayList<Empleado> cargarEmpleados() throws IOException {
+	public static ObservableList<Estudiante> cargarEstudiantes() throws IOException {
 //		
-//		ArrayList<Empleado> empleados =new ArrayList<Empleado>();
-//		
-//		ArrayList<String> contenido = ArchivoUtil.leerArchivo(RUTA_ARCHIVO_EMPLEADOS);
-//		String linea="";
-//		
-//		for (int i = 0; i < contenido.size(); i++)
-//		{
-//			linea = contenido.get(i);
-//			Empleado empleado = new Empleado();
-//			empleado.setNombre(linea.split(",")[0]);
-//			empleado.setApellido(linea.split(",")[1]);
-//			empleado.setCedula(linea.split(",")[2]);
-//			empleado.setFechaNacimiento(linea.split(",")[3]);
-//			empleados.add(empleado);
-//		}
-//		return empleados;
-//	}
+		ObservableList<Estudiante> estudiantes = FXCollections.observableArrayList();
+		
+		ArrayList<String> contenido = ArchivoUtil.leerArchivo(RUTA_ARCHIVO_ESTUDIANTES);
+		String linea="";
+		for (int i = 0; i < contenido.size(); i++)
+		{
+			linea = contenido.get(i);
+			Estudiante estudiante = new Estudiante();
+			estudiante.setCodigo(linea.split(",")[0]);
+			estudiante.setNombre(linea.split(",")[1]);
+			estudiante.setNota1(Integer.parseInt(linea.split(",")[2]));
+			estudiante.setNota2(Integer.parseInt(linea.split(",")[3]));
+			estudiante.setNota3(Integer.parseInt(linea.split(",")[4]));
+			estudiantes.add(estudiante);
+		}
+		return estudiantes;
+	}
 	
-	
+	public static Estudiante buscarEstudiante(String codigo) throws IOException {
+//		
+		Estudiante estudiante = new Estudiante();
+		ArrayList<String> contenido = ArchivoUtil.leerArchivo(RUTA_ARCHIVO_ESTUDIANTES);
+		String linea="";
+		for (int i = 0; i < contenido.size(); i++)
+		{
+			linea = contenido.get(i);
+			if ((linea.split(",")[0].equals(codigo))) {
+				estudiante.setCodigo(linea.split(",")[0]);
+				estudiante.setNombre(linea.split(",")[1]);
+				estudiante.setNota1(Integer.parseInt(linea.split(",")[2]));
+				estudiante.setNota2(Integer.parseInt(linea.split(",")[3]));
+				estudiante.setNota3(Integer.parseInt(linea.split(",")[4]));
+				return estudiante;
+			}
+		}
+		return null;
+	}
 
 
-//	public static void guardaRegistroLog(String mensajeLog, int nivel, String accion)
-//	{
-//		
-//		ArchivoUtil.guardarRegistroLog(mensajeLog, nivel, accion, RUTA_ARCHIVO_LOG);
-//	}
+	public static void guardaRegistroLog(String mensajeLog, int nivel, String accion)
+	{
+		
+		ArchivoUtil.guardarRegistroLog(mensajeLog, nivel, accion, RUTA_ARCHIVO_LOG);
+	}
 
 
 //	public static boolean iniciarSesion(String usuario, String contrasenia) throws FileNotFoundException, IOException, UsuarioExcepcion {
@@ -248,19 +277,33 @@ public class Persistencia {
 //	}
 	
 	
-//	public static Banco cargarRecursoBancoXML() {
-//		
-//		Banco banco = null;
-//		
-//		try {
-//			banco = (Banco)ArchivoUtil.cargarRecursoSerializadoXML(RUTA_ARCHIVO_MODELO_BANCO_XML);
-//		} catch (Exception e) {
-//			// TODO Auto-generated catch block
-//			e.printStackTrace();
-//		}
-//		return banco;
-//
-//	}
+	// GUARDA LA LISTA COMO ARRAYLIST PORQUE UNA OBSERVABLE LIST NO ES SERIALIZABLE AKSJDHASJD
+	public static void guardarProgramas(ObservableList<Programa> lista) {
+	try {
+		List<Programa> list = lista.stream().collect(Collectors.toList());
+		ArchivoUtil.salvarRecursoSerializadoXML(RUTA_ARCHIVO_PROGRAMAS, list);
+	} catch (Exception e) {
+		// TODO Auto-generated catch block
+		e.printStackTrace();
+	}
+}
+	
+	
+	public static ObservableList<Programa> cargarProgramasXML() {
+		
+		ObservableList<Programa> lista = FXCollections.observableArrayList();
+		List<Programa> list = null;
+		
+		try {
+			list = (List<Programa>)ArchivoUtil.cargarRecursoSerializadoXML(RUTA_ARCHIVO_PROGRAMAS);
+			lista.addAll(list);
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return lista;
+
+	}
 
 	
 	

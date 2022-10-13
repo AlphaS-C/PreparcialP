@@ -3,27 +3,24 @@ package model;
 import java.io.Serializable;
 import java.util.Objects;
 
-public class Estudiante implements Serializable{
-
-	private static final long serialVersionUID = 1L;
+public class Programa implements Serializable{
+	
 	String codigo;
 	String nombre;
-	int nota1, nota2, nota3;
+	String modalidad;
 
 // constructor vacio
-	public Estudiante() {
+	public Programa() {
 		
 	}
 
 	
 	
-public Estudiante(String codigo, String nombre, int nota1, int nota2, int nota3) {
+public Programa(String codigo, String nombre, String modalidad) {
 	super();
 	this.codigo = codigo;
 	this.nombre = nombre;
-	this.nota1 = nota1;
-	this.nota2 = nota2;
-	this.nota3 = nota3;
+	this.modalidad = modalidad;
 }
 
 
@@ -31,7 +28,7 @@ public Estudiante(String codigo, String nombre, int nota1, int nota2, int nota3)
 // metodo toString
 	@Override
 	public String toString() {
-		return codigo + "," + nombre + "," + nota1 + "," + nota2 + "," + nota3;
+		return codigo + "," + nombre + "," + modalidad;
 	}
 
 // metodo equals
@@ -43,7 +40,7 @@ public Estudiante(String codigo, String nombre, int nota1, int nota2, int nota3)
 			return false;
 		if (getClass() != obj.getClass())
 			return false;
-		Estudiante other = (Estudiante) obj;
+		Programa other = (Programa) obj;
 		return Objects.equals(codigo, other.codigo);
 	}
 
@@ -63,29 +60,18 @@ public Estudiante(String codigo, String nombre, int nota1, int nota2, int nota3)
 		this.nombre = nombre;
 	}
 
-	public int getNota1() {
-		return nota1;
+
+
+	public String getModalidad() {
+		return modalidad;
 	}
 
-	public void setNota1(int nota1) {
-		this.nota1 = nota1;
+
+
+	public void setModalidad(String modalidad) {
+		this.modalidad = modalidad;
 	}
 
-	public int getNota2() {
-		return nota2;
-	}
-
-	public void setNota2(int nota2) {
-		this.nota2 = nota2;
-	}
-
-	public int getNota3() {
-		return nota3;
-	}
-
-	public void setNota3(int nota3) {
-		this.nota3 = nota3;
-	}
 
 	
 	

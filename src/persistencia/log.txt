@@ -1,0 +1,132 @@
+Oct 11, 2022 10:16:54 PM persistencia.ArchivoUtil guardarRegistroLog
+INFO: cargar txt,Estudiantes Cargados,2022-10-11
+Oct 11, 2022 10:17:21 PM persistencia.ArchivoUtil guardarRegistroLog
+INFO: agregar estudiantee,Estudiante añadido al ObservableList,2022-10-11
+Oct 11, 2022 10:17:21 PM persistencia.ArchivoUtil guardarRegistroLog
+INFO: set listview,ListView Actualizado,2022-10-11
+Oct 11, 2022 10:17:22 PM persistencia.ArchivoUtil guardarRegistroLog
+INFO: guardar txt,Archivo Guardado,2022-10-11
+Oct 11, 2022 10:17:35 PM persistencia.ArchivoUtil guardarRegistroLog
+INFO: cargar txt,Estudiantes Cargados,2022-10-11
+Oct 13, 2022 2:20:02 AM persistencia.ArchivoUtil guardarRegistroLog
+INFO: agregar programae,programa añadido al ObservableList,2022-10-13
+Oct 13, 2022 2:20:02 AM persistencia.ArchivoUtil guardarRegistroLog
+INFO: set listview,ListView Actualizado,2022-10-13
+Oct 13, 2022 2:20:11 AM persistencia.ArchivoUtil guardarRegistroLog
+INFO: agregar programae,programa añadido al ObservableList,2022-10-13
+Oct 13, 2022 2:20:11 AM persistencia.ArchivoUtil guardarRegistroLog
+INFO: set listview,ListView Actualizado,2022-10-13
+Oct 13, 2022 2:20:25 AM persistencia.ArchivoUtil guardarRegistroLog
+INFO: guardar txt,Archivo Guardado,2022-10-13
+Oct 13, 2022 2:32:11 AM persistencia.ArchivoUtil guardarRegistroLog
+INFO: agregar programae,programa añadido al ObservableList,2022-10-13
+Oct 13, 2022 2:32:11 AM persistencia.ArchivoUtil guardarRegistroLog
+INFO: set listview,ListView Actualizado,2022-10-13
+Oct 13, 2022 2:32:19 AM persistencia.ArchivoUtil guardarRegistroLog
+INFO: agregar programae,programa añadido al ObservableList,2022-10-13
+Oct 13, 2022 2:32:19 AM persistencia.ArchivoUtil guardarRegistroLog
+INFO: set listview,ListView Actualizado,2022-10-13
+Oct 13, 2022 2:32:20 AM persistencia.ArchivoUtil guardarRegistroLog
+INFO: agregar programae,programa añadido al ObservableList,2022-10-13
+Oct 13, 2022 2:32:20 AM persistencia.ArchivoUtil guardarRegistroLog
+INFO: set listview,ListView Actualizado,2022-10-13
+Oct 13, 2022 2:32:23 AM persistencia.ArchivoUtil guardarRegistroLog
+INFO: guardar txt,Archivo Guardado,2022-10-13
+Oct 13, 2022 2:33:55 AM persistencia.ArchivoUtil guardarRegistroLog
+INFO: cargar txt,programas Cargados,2022-10-13
+Oct 13, 2022 2:35:45 AM persistencia.ArchivoUtil guardarRegistroLog
+INFO: agregar programae,programa añadido al ObservableList,2022-10-13
+Oct 13, 2022 2:35:45 AM persistencia.ArchivoUtil guardarRegistroLog
+INFO: set listview,ListView Actualizado,2022-10-13
+Oct 13, 2022 2:35:56 AM persistencia.ArchivoUtil guardarRegistroLog
+INFO: guardar txt,Archivo Guardado,2022-10-13
+Oct 13, 2022 3:00:57 AM persistencia.ArchivoUtil guardarRegistroLog
+INFO: agregar programae,programa añadido al ObservableList,2022-10-13
+Oct 13, 2022 3:00:57 AM persistencia.ArchivoUtil guardarRegistroLog
+INFO: set listview,ListView Actualizado,2022-10-13
+Oct 13, 2022 3:00:59 AM persistencia.ArchivoUtil guardarRegistroLog
+INFO: guardar txt,Archivo Guardado,2022-10-13
+Oct 13, 2022 3:03:31 AM persistencia.ArchivoUtil guardarRegistroLog
+INFO: agregar programae,programa añadido al ObservableList,2022-10-13
+Oct 13, 2022 3:03:31 AM persistencia.ArchivoUtil guardarRegistroLog
+INFO: set listview,ListView Actualizado,2022-10-13
+Oct 13, 2022 3:03:31 AM persistencia.ArchivoUtil guardarRegistroLog
+INFO: agregar programae,programa añadido al ObservableList,2022-10-13
+Oct 13, 2022 3:03:31 AM persistencia.ArchivoUtil guardarRegistroLog
+INFO: set listview,ListView Actualizado,2022-10-13
+Oct 13, 2022 3:03:31 AM persistencia.ArchivoUtil guardarRegistroLog
+INFO: agregar programae,programa añadido al ObservableList,2022-10-13
+Oct 13, 2022 3:03:31 AM persistencia.ArchivoUtil guardarRegistroLog
+INFO: set listview,ListView Actualizado,2022-10-13
+Oct 13, 2022 3:03:32 AM persistencia.ArchivoUtil guardarRegistroLog
+INFO: guardar txt,Archivo Guardado,2022-10-13
+Oct 13, 2022 3:08:44 AM persistencia.ArchivoUtil guardarRegistroLog
+INFO: agregar programae,programa añadido al ObservableList,2022-10-13
+Oct 13, 2022 3:08:44 AM persistencia.ArchivoUtil guardarRegistroLog
+INFO: set listview,ListView Actualizado,2022-10-13
+Oct 13, 2022 3:08:44 AM persistencia.ArchivoUtil guardarRegistroLog
+INFO: agregar programae,programa añadido al ObservableList,2022-10-13
+Oct 13, 2022 3:08:44 AM persistencia.ArchivoUtil guardarRegistroLog
+INFO: set listview,ListView Actualizado,2022-10-13
+Oct 13, 2022 3:08:45 AM persistencia.ArchivoUtil guardarRegistroLog
+INFO: agregar programae,programa añadido al ObservableList,2022-10-13
+Oct 13, 2022 3:08:45 AM persistencia.ArchivoUtil guardarRegistroLog
+INFO: set listview,ListView Actualizado,2022-10-13
+Oct 13, 2022 3:08:46 AM persistencia.ArchivoUtil guardarRegistroLog
+INFO: guardar txt,Archivo Guardado,2022-10-13
+Oct 13, 2022 3:09:21 AM persistencia.ArchivoUtil guardarRegistroLog
+INFO: cargar txt,programas Cargados,2022-10-13
+Oct 13, 2022 3:19:15 AM persistencia.ArchivoUtil guardarRegistroLog
+INFO: cargar txt,programas Cargados,2022-10-13
+Oct 13, 2022 3:22:51 AM persistencia.ArchivoUtil guardarRegistroLog
+INFO: cargar txt,programas Cargados,2022-10-13
+Oct 13, 2022 3:26:01 AM persistencia.ArchivoUtil guardarRegistroLog
+INFO: agregar programae,programa añadido al ObservableList,2022-10-13
+Oct 13, 2022 3:26:01 AM persistencia.ArchivoUtil guardarRegistroLog
+INFO: set listview,ListView Actualizado,2022-10-13
+Oct 13, 2022 3:26:01 AM persistencia.ArchivoUtil guardarRegistroLog
+INFO: agregar programae,programa añadido al ObservableList,2022-10-13
+Oct 13, 2022 3:26:01 AM persistencia.ArchivoUtil guardarRegistroLog
+INFO: set listview,ListView Actualizado,2022-10-13
+Oct 13, 2022 3:26:04 AM persistencia.ArchivoUtil guardarRegistroLog
+INFO: agregar programae,programa añadido al ObservableList,2022-10-13
+Oct 13, 2022 3:26:04 AM persistencia.ArchivoUtil guardarRegistroLog
+INFO: set listview,ListView Actualizado,2022-10-13
+Oct 13, 2022 3:26:05 AM persistencia.ArchivoUtil guardarRegistroLog
+INFO: guardar txt,Archivo Guardado,2022-10-13
+Oct 13, 2022 3:28:59 AM persistencia.ArchivoUtil guardarRegistroLog
+INFO: agregar programae,programa añadido al ObservableList,2022-10-13
+Oct 13, 2022 3:28:59 AM persistencia.ArchivoUtil guardarRegistroLog
+INFO: set listview,ListView Actualizado,2022-10-13
+Oct 13, 2022 3:28:59 AM persistencia.ArchivoUtil guardarRegistroLog
+INFO: agregar programae,programa añadido al ObservableList,2022-10-13
+Oct 13, 2022 3:28:59 AM persistencia.ArchivoUtil guardarRegistroLog
+INFO: set listview,ListView Actualizado,2022-10-13
+Oct 13, 2022 3:28:59 AM persistencia.ArchivoUtil guardarRegistroLog
+INFO: agregar programae,programa añadido al ObservableList,2022-10-13
+Oct 13, 2022 3:28:59 AM persistencia.ArchivoUtil guardarRegistroLog
+INFO: set listview,ListView Actualizado,2022-10-13
+Oct 13, 2022 3:29:00 AM persistencia.ArchivoUtil guardarRegistroLog
+INFO: guardar txt,Archivo Guardado,2022-10-13
+Oct 13, 2022 3:29:31 AM persistencia.ArchivoUtil guardarRegistroLog
+INFO: cargar txt,programas Cargados,2022-10-13
+Oct 13, 2022 3:30:27 AM persistencia.ArchivoUtil guardarRegistroLog
+INFO: cargar txt,programas Cargados,2022-10-13
+Oct 13, 2022 3:31:50 AM persistencia.ArchivoUtil guardarRegistroLog
+INFO: cargar txt,programas Cargados,2022-10-13
+Oct 13, 2022 3:32:03 AM persistencia.ArchivoUtil guardarRegistroLog
+INFO: guardar txt,Archivo Guardado,2022-10-13
+Oct 13, 2022 3:32:05 AM persistencia.ArchivoUtil guardarRegistroLog
+INFO: agregar programae,programa añadido al ObservableList,2022-10-13
+Oct 13, 2022 3:32:05 AM persistencia.ArchivoUtil guardarRegistroLog
+INFO: set listview,ListView Actualizado,2022-10-13
+Oct 13, 2022 3:32:05 AM persistencia.ArchivoUtil guardarRegistroLog
+INFO: guardar txt,Archivo Guardado,2022-10-13
+Oct 13, 2022 3:32:07 AM persistencia.ArchivoUtil guardarRegistroLog
+INFO: cargar txt,programas Cargados,2022-10-13
+Oct 13, 2022 3:32:09 AM persistencia.ArchivoUtil guardarRegistroLog
+INFO: agregar programae,programa añadido al ObservableList,2022-10-13
+Oct 13, 2022 3:32:09 AM persistencia.ArchivoUtil guardarRegistroLog
+INFO: set listview,ListView Actualizado,2022-10-13
+Oct 13, 2022 3:32:10 AM persistencia.ArchivoUtil guardarRegistroLog
+INFO: cargar txt,programas Cargados,2022-10-13
