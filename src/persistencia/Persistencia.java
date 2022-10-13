@@ -1,6 +1,7 @@
 package persistencia;
 
 import java.beans.XMLEncoder;
+import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
@@ -9,6 +10,7 @@ import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Properties;
 import java.util.logging.FileHandler;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -27,7 +29,7 @@ public class Persistencia {
 
 	public static final String RUTA_ARCHIVO_ESTUDIANTES = "src/persistencia/estudiantes.txt";
 	public static final String RUTA_ARCHIVO_PROGRAMAS = "src/persistencia/programas.txt";
-//	public static final String RUTA_ARCHIVO_EMPLEADOS = "src/resources/archivoEmpleados.txt";
+	public static final String RUTA_ARCHIVO_PROPERTIES = "src/persistencia/properties.properties";
 //	public static final String RUTA_ARCHIVO_USUARIOS = "src/resources/archivoUsuarios.txt";
 	public static final String RUTA_ARCHIVO_LOG = "src/persistencia/log.txt";
 //	public static final String RUTA_ARCHIVO_OBJETOS = "src/resources/archivoObjetos.txt";
@@ -276,12 +278,62 @@ public class Persistencia {
 //		}
 //	}
 	
+	public static void guardarModalidades(ObservableList<Programa> lista) throws IOException {
+		
+		for (Programa prog : lista) {
+			guardarPropiedades(prog.getCodigo(), prog.getModalidad());
+		}
+		
+	}
+	
+	
+	private static void guardarPropiedades(String nombre, String valor) throws IOException {
+		FileOutputStream fileOut = null;
+        FileInputStream fileIn = null;
+        try {
+            Properties configProperty = new Properties();
+
+            File file = new File(RUTA_ARCHIVO_PROPERTIES);
+            fileIn = new FileInputStream(file);
+            configProperty.load(fileIn);
+            configProperty.setProperty(nombre, valor);
+            fileOut = new FileOutputStream(file);
+            configProperty.store(fileOut, "null");
+
+        } catch (Exception ex) {
+           ex.printStackTrace();
+        } finally {
+            try {
+                fileOut.close();
+            } catch (IOException ex) {
+                ex.printStackTrace();
+            }
+        }
+	}
+	
+	public static Properties getProperties() throws IOException {
+		FileInputStream fis = null;
+	      Properties prop = null;
+	      try {
+	         fis = new FileInputStream(RUTA_ARCHIVO_PROPERTIES);
+	         prop = new Properties();
+	         prop.load(fis);
+	      } catch(FileNotFoundException fnfe) {
+	         fnfe.printStackTrace();
+	      } catch(IOException ioe) {
+	         ioe.printStackTrace();
+	      } finally {
+	         fis.close();
+	      }
+		return prop;
+	}
 	
 	// GUARDA LA LISTA COMO ARRAYLIST PORQUE UNA OBSERVABLE LIST NO ES SERIALIZABLE AKSJDHASJD
 	public static void guardarProgramas(ObservableList<Programa> lista) {
 	try {
 		List<Programa> list = lista.stream().collect(Collectors.toList());
 		ArchivoUtil.salvarRecursoSerializadoXML(RUTA_ARCHIVO_PROGRAMAS, list);
+		
 	} catch (Exception e) {
 		// TODO Auto-generated catch block
 		e.printStackTrace();
@@ -289,11 +341,11 @@ public class Persistencia {
 }
 	
 	
+	
 	public static ObservableList<Programa> cargarProgramasXML() {
 		
 		ObservableList<Programa> lista = FXCollections.observableArrayList();
 		List<Programa> list = null;
-		
 		try {
 			list = (List<Programa>)ArchivoUtil.cargarRecursoSerializadoXML(RUTA_ARCHIVO_PROGRAMAS);
 			lista.addAll(list);

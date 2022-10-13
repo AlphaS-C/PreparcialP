@@ -130,3 +130,31 @@ Oct 13, 2022 3:32:09 AM persistencia.ArchivoUtil guardarRegistroLog
 INFO: set listview,ListView Actualizado,2022-10-13
 Oct 13, 2022 3:32:10 AM persistencia.ArchivoUtil guardarRegistroLog
 INFO: cargar txt,programas Cargados,2022-10-13
+Oct 13, 2022 3:31:42 PM persistencia.ArchivoUtil guardarRegistroLog
+INFO: agregar programae,programa añadido al ObservableList,2022-10-13
+Oct 13, 2022 3:31:43 PM persistencia.ArchivoUtil guardarRegistroLog
+INFO: set listview,ListView Actualizado,2022-10-13
+Oct 13, 2022 3:33:24 PM persistencia.ArchivoUtil guardarRegistroLog
+INFO: guardar programas,Archivo Guardado,2022-10-13
+Oct 13, 2022 3:33:25 PM persistencia.ArchivoUtil guardarRegistroLog
+INFO: agregar programae,programa añadido al ObservableList,2022-10-13
+Oct 13, 2022 3:33:25 PM persistencia.ArchivoUtil guardarRegistroLog
+INFO: set listview,ListView Actualizado,2022-10-13
+Oct 13, 2022 3:33:26 PM persistencia.ArchivoUtil guardarRegistroLog
+INFO: guardar programas,Archivo Guardado,2022-10-13
+Oct 13, 2022 3:33:42 PM persistencia.ArchivoUtil guardarRegistroLog
+INFO: agregar programae,programa añadido al ObservableList,2022-10-13
+Oct 13, 2022 3:33:42 PM persistencia.ArchivoUtil guardarRegistroLog
+INFO: set listview,ListView Actualizado,2022-10-13
+Oct 13, 2022 3:33:43 PM persistencia.ArchivoUtil guardarRegistroLog
+INFO: guardar programas,Archivo Guardado,2022-10-13
+Oct 13, 2022 3:34:12 PM persistencia.ArchivoUtil guardarRegistroLog
+INFO: cargar txt,programas Cargados,2022-10-13
+Oct 13, 2022 3:56:07 PM persistencia.ArchivoUtil guardarRegistroLog
+INFO: cargar txt,Estudiantes Cargados,2022-10-13
+Oct 13, 2022 3:56:17 PM persistencia.ArchivoUtil guardarRegistroLog
+INFO: buscar estudiante,Estudiante buscado,2022-10-13
+Oct 13, 2022 3:56:17 PM persistencia.ArchivoUtil guardarRegistroLog
+INFO: buscar estudiante,Estudiante encontrado,2022-10-13
+Oct 13, 2022 3:56:26 PM persistencia.ArchivoUtil guardarRegistroLog
+INFO: cargar txt,programas Cargados,2022-10-13

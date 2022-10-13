@@ -3,6 +3,7 @@ package controller;
 import java.io.IOException;
 import java.io.Serializable;
 import java.net.URL;
+import java.util.Properties;
 import java.util.ResourceBundle;
 
 import javafx.collections.FXCollections;
@@ -21,6 +22,7 @@ public class Ej2Controller implements Serializable , Initializable {
 
 	ObservableList<Programa> programas = FXCollections.observableArrayList();
 	Persistencia persistencia = new Persistencia();
+	Properties propiedades = new Properties();
 
 	@FXML TextField codigo;
 	@FXML TextField nombre;
@@ -44,14 +46,27 @@ public class Ej2Controller implements Serializable , Initializable {
 	
 	public void guardar() {
 		persistencia.guardarProgramas(programas);
-		persistencia.guardaRegistroLog("Archivo Guardado", 1, "guardar txt");
+		try {
+			persistencia.guardarModalidades(programas);
+			persistencia.guardaRegistroLog("Archivo Guardado", 1, "guardar programas");
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			persistencia.guardaRegistroLog("Archivo Fallo al guardar", 2, "guardar programas");
+			e.printStackTrace();
+		}
+		
 	}
 	
 	public void cargar() {
 		programas = persistencia.cargarProgramasXML();
 		list.setItems(programas);
-		persistencia.guardaRegistroLog("programas Cargados", 1, "cargar txt");
-		
+		try {
+			propiedades = persistencia.getProperties();
+			persistencia.guardaRegistroLog("programas Cargados", 1, "cargar txt");
+		} catch (IOException e) {
+			persistencia.guardaRegistroLog("programas No Cargados", 2, "cargar Propiedades");
+			e.printStackTrace();
+		}
 	}
 	
 	public void buscar() {
@@ -65,7 +80,7 @@ public class Ej2Controller implements Serializable , Initializable {
 		if (prog != null) {
 			codigo.setText(prog.getCodigo());
 			nombre.setText(prog.getNombre());
-			combo.setValue(prog.getModalidad());
+			combo.setValue(propiedades.getProperty(prog.getCodigo()));
 			feedback.setText("Programa encontrado");
 		} else feedback.setText("Programa no encontrado");
 		
